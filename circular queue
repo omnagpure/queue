@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+#define MAXSIZE 5
+int rear=-1,front=-1,queue[MAXSIZE],a;
+
+void ins(){
+	if(front==(rear+1)%MAXSIZE){
+	    cout<<"QUEUE IS FULL";
+	}
+	else{
+	    rear=(rear+1)%MAXSIZE;
+	    if(front==-1){
+	        front=0;
+	    }
+	    cout<<"enter an element";
+	    cin>>a;
+	    queue[rear]=a;
+	    cout<<"element"<<a<<"is inserted at"<<rear;
+	}
+}
+
+
+void del(){
+    if((front==-1) || (front>rear)){
+        cout<<"queue is empty"
+    }
+    else{
+        a=queue[front];
+        front=(front+!)%maxsize;
+        cout<<"element"<<a<<"is is deleted";
+        if(rear==((MAXSIZE-1)&&front==0)||(front>rear)){
+            front=-1;
+            rear=-1;
+        }
+    }
+    }
+}
+void display(){
+    int i;
+    if(front==-1 ||rear==-1){
+        cout<<"queue is empty"
+    }
+    else{
+        cout<<"queue element are :";
+        for(i=front,i<rear;i++){
+            cout<<queue[i];
+        }
+     }
+}
+
+int main(){
+    int n;
+    while(n!=4){
+        cout<<"\n Enter what you want to"<<"\n 1.Insert"<<"\n 2.Delete"<<"\n 3.Display"<<"\n 4.Exit"<<"\n";
+        "
+    }
+}
